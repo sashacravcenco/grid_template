@@ -1,26 +1,31 @@
 .form {
     padding: ($gap * 1.5) 0;
     background-color: $color-primary;
+
     &__container {
         display: grid;
         grid-gap: $gap;
         @extend %container;
+
         @include lg-min {
             grid-template-columns: repeat(3, 1fr);
         }
+
         @include lg-md {
             grid-template-columns: repeat(3, 1fr);
         }
+
         @include md-sm {
             grid-template-columns: 1fr 1fr;
         }
     }
+
     .btn-accent {
         width: 100%;
         color: $color-light;
-        border-color: rgba($color-light, 0);
-        border-bottom-color: rgba($color-light, 0.2);
-        background-color: rgba($color-light, 0.1);
+        border-color: rgba(255, 255, 255, 0);
+        border-bottom-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.1);
 
         &:hover,
         &:focus {
@@ -51,9 +56,9 @@
         letter-spacing: 0.15em;
 
         color: $color-light;
-        border: 2px solid rgba($color-light, 0);
-        border-bottom-color: rgba($color-light, 0.25);
-        background-color: rgba($color-light, 0.05);
+        border: 2px solid rgba(255, 255, 255, 0);
+        border-bottom-color: rgba(255, 255, 255, 0.25);
+        background-color: rgba(255, 255, 255, 0.05);
 
         font-size: 1.125rem;
 
@@ -63,13 +68,14 @@
 
         &:hover,
         &:focus {
-            border-color: rgba($color-light, 0.15);
+            border-color: rgba(255, 255, 255, 0.15);
             border-bottom-color: $color-light;
-            background-color: rgba($color-light, 0.15);
+            background-color: rgba(255, 255, 255, 0.15);
+            outline: none;
+        }
 
-            &::placeholder {
-                color: lighten($color-gray, 15%);
-            }
+        &::placeholder {
+            color: lighten($color-gray, 15%);
         }
     }
 }
